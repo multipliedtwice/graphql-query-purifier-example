@@ -1,0 +1,37 @@
+// schema.prisma
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "generated"
+}
+
+model Employee {
+  id           Int        @id @default(autoincrement())
+  name         String
+  departmentId Int
+  department   Department @relation(fields: [departmentId], references: [id])
+  salary       Salary?
+  salaryId     Int?
+}
+
+model Department {
+  id        Int        @id @default(autoincrement())
+  name      String
+  employees Employee[]
+}
+
+model Salary {
+  id         Int      @id @default(autoincrement())
+  amount     Float
+  employeeId Int      @unique
+  employee   Employee @relation(fields: [employeeId], references: [id])
+}

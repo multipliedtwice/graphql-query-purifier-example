@@ -1,0 +1,10 @@
+query {
+  departments {
+    id
+    name
+    employees {
+      id
+      name
+    }
+  }
+}

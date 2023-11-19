@@ -1,0 +1,13 @@
+export { AggregateSalaryArgs } from "./AggregateSalaryArgs";
+export { CreateOneSalaryArgs } from "./CreateOneSalaryArgs";
+export { DeleteManySalaryArgs } from "./DeleteManySalaryArgs";
+export { DeleteOneSalaryArgs } from "./DeleteOneSalaryArgs";
+export { FindFirstSalaryArgs } from "./FindFirstSalaryArgs";
+export { FindFirstSalaryOrThrowArgs } from "./FindFirstSalaryOrThrowArgs";
+export { FindManySalaryArgs } from "./FindManySalaryArgs";
+export { FindUniqueSalaryArgs } from "./FindUniqueSalaryArgs";
+export { FindUniqueSalaryOrThrowArgs } from "./FindUniqueSalaryOrThrowArgs";
+export { GroupBySalaryArgs } from "./GroupBySalaryArgs";
+export { UpdateManySalaryArgs } from "./UpdateManySalaryArgs";
+export { UpdateOneSalaryArgs } from "./UpdateOneSalaryArgs";
+export { UpsertOneSalaryArgs } from "./UpsertOneSalaryArgs";
